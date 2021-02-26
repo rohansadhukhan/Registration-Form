@@ -1,0 +1,317 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+nav, header, footer {
+    display: block;
+}
+
+body {
+    margin: 0;
+    line-height: 1;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    background-color: #eee;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row::after { /* for new freash row */
+    display: table;
+    clear: both; /* clear float from both end */
+    content: ""; /* taking no content from previous rows */
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.col-4-md {
+    width: 25%;
+    margin: auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+label {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+article p {
+    font-size: 25px;
+    padding: 20px;
+}
+
+button {
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background-color: #0069FF;
+    padding: 15px 50px;
+    border-radius: 10px;
+    display: block;
+    margin: 5px;
+    text-align: center;
+}
+
+/* ----------------------------     Nav Bar     ------------------------------ */
+
+nav {
+    width: 100%;
+    margin: 0;
+}
+
+nav ul {
+    background: #eee;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+ul.topnav li {
+    float: left;
+    list-style: none;
+}
+
+ul.topnav li.topnav-right {
+    float: right;
+}
+
+ul.topnav li a {
+    display: block;
+    text-decoration: none;
+    min-height: 16px;
+    text-align: center;
+    padding: 16px;
+    text-transform: uppercase;
+    color: #667;
+}
+
+ul.topnav li a:hover {
+    background-color: #0080ff;
+    color: white;
+}
+
+ul.topnav li.dropdownicon {
+    display: none;
+}
+
+/*********************    Custom Style    **********************/
+
+#section-1-gradient {
+    background: linear-gradient(#076DFF, #65A5FF);
+}
+
+h1.larger {
+    color: white;
+    font-size: 56px;
+    margin: 0;
+    line-height: 60px;
+}
+
+form h2 {
+    color: white;
+}
+
+input[type="text"] {
+    font-size: 15px;
+    width: 80%;
+    min-width: 100px;
+    padding: 4px;
+    border-radius: 7px;
+}
+
+input[type="password"] {
+    font-size: 15px;
+    width: 80%;
+    min-width: 100px;
+    padding: 4px;
+    border-radius: 7px; 
+}
+
+div.leftside-col {
+    margin-left: 25%;
+}
+
+div.rightside-col {
+    margin-left: 15%;
+    /* margin-right: 25%;
+    float: right; */
+}
+
+header h2.section-2-header {
+    text-align: center;
+    font-size: 50px;
+}
+
+div.box {
+    text-align: center;
+    margin: 24px;
+    border-radius: 10px;
+    padding: 36px 24px 40px;
+    background-color: white;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.15),
+        0 2px 20px 0 rgba(0, 0, 0, 0.1); /* horizontal vertical blur spread color*/
+}
+
+div.mid {
+    text-align: center;
+}
+
+div.form-group {
+    line-height: 50px;
+}
+
+button.learnMore {
+    display: block;
+    margin: auto;
+}
+
+div.webdevIcon img {
+    display: block;
+    margin: auto;
+    box-shadow: -2px -2px 5px 2px rgba(0, 0, 0, 0.5),
+        2px 2px 5px 2px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+}
+
+footer {
+    display: block;
+    margin-top: auto;
+}
+
+footer.footsy {
+    background-color: #666;
+    padding-left: 10%;
+}
+
+footer h1 {
+    font-size: 20px;
+    color: white;
+}
+
+footer.footsy ul {
+    list-style: none;
+    text-align: left;
+    padding-left: 0;
+}
+
+footer.footsy ul li {
+    font-size: 15px;
+    color: white;
+    line-height: 1.5;
+}
+
+/* ----------------------------     Mobile     ------------------------------ */
+@media screen and (max-width: 680px) {
+    ul.topnav li:not(:nth-child(1)) {
+        display: none;
+    }
+
+    ul.topnav li.dropdownicon {
+        display: block;
+        float: right;
+    }
+
+    ul.topnav.responsive li.dropdownicon {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    ul.topnav.responsive {
+        position: relative;
+    }
+
+    ul.topnav.responsive li {
+        display: inline;
+        float: none;
+    }
+
+    ul.topnav.responsive li a {
+        display: block;
+        text-align: left;
+    }
+
+    .col-6,
+    .col-4,
+    .col-5,
+    .col-7 {
+        width: 100%;
+        margin: 0;
+    }
+
+    div.mobileStack {
+        width: 50%;
+        display: block;
+    }
+
+    div.box {
+        display: block;
+        padding: 10px 5px 15px;
+    }
+    div.leftside-col, div.rightside-col {
+        margin: 15px;
+    }
+
+    input[type="text"] {
+        width: 350px;
+    }
+
+    div.videoContainer iframe {
+        position: relative;
+        width: 100%;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    h2.section-2-header {
+        font-size: 3px;
+    }
+
+    article p {
+        font-size: 20px;
+    }
+
+    div.webdevIcon {
+        margin: 10px;
+    }
+
+    div.webdevIcon img {
+        width: 100%;
+        display: block;
+    }
+}

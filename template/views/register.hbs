@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    {{>navbar}}
+
+    <div class="tab-content">
+        <div class="container mid">
+            <h3>Registration</h3>
+            <form action="/register" method="POST">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <input type="text" placeholder="First Name" value="" name="firstName">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" placeholder="Email" value="" name="email">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" placeholder="Phone" value="" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="password" placeholder="Password" value="" name="password">
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="form-group">
+                            <input type="text" placeholder="Last Name" value="" name="lastName">
+                        </div>
+
+                        <div class="form-group" style="float: left; margin-left: 10%">
+                            <span>Select gender: </span>
+                            <input type="radio" value="male" name="gender" checked="checked">
+                            <span>Male</span>
+                            <input type="radio" value="female" name="gender">
+                            <span>Female</span>
+                            <input type="radio" value="other" name="gender">
+                            <span>Other</span>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" placeholder="Age" value="" name="age">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="password" placeholder="Comfirm Password" value="" name="confirmPassword">
+                        </div>
+
+                    </div>
+                    <div class="form-group" style="margin:auto">
+                        <button type="submit" value="Register">Register</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    {{>footer}}
+
+
+</body>
+
+</html>

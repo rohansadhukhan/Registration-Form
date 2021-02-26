@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    {{>navbar}}
+
+    <div class="container mid form-group">
+        <div class="row" style="margin: auto">
+            <div class="col-4-md">
+                <h2>Login</h2>
+                <div>
+                    <img src="./images/profile.jpg" alt="hi" width="100px">
+                    <form action="/login" method="POST">
+                        <input type="text" required name="email" placeholder="Email">
+                        <input type="password" required name="password" placeholder="Password">
+                        <button type="submit" style="margin: auto;">Log In</button>
+                        <label>
+                            <input type="checkbox" value="remember-me">
+                            Remember me
+                        </label>
+                        <a href="#">Need help?</a>
+                    </form>
+                </div>
+                <a href="/register">Create a new account</a>
+            </div>
+        </div>
+    </div>
+
+
+    {{>footer}}
+
+
+</body>
+
+</html>
